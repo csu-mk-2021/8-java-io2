@@ -14,7 +14,7 @@ public class Task01Main {
 
     public static String extractSoundName(File file) throws IOException, InterruptedException {
         ProcessBuilder process = new ProcessBuilder("cmd.exe", "/c", "ffprobe -v error -of flat -show_format " + file.getAbsolutePath());
-        process.directory(new File("C:\\Users\\Аня\\Desktop\\ffmpeg-4.3.2-2021-02-27-full_build\\bin"));
+        process.directory(new File("C:\\Users\\Ivan\\Desktop\\ffmpeg-4.3.2-2021-02-27-full_build\\bin"));
         try(BufferedReader buffer = new BufferedReader(new InputStreamReader(process.start().getInputStream()))) {
             String txt = buffer.readLine();
             while (txt != null){
