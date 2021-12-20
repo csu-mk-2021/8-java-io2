@@ -22,6 +22,5 @@ public class Task02Main {
         try (Stream<Path> walk = Files.walk(rootDir)) {
             return walk.filter(Files::isRegularFile).collect(Collectors.toList());
         }
-        return null;
     }
 }
